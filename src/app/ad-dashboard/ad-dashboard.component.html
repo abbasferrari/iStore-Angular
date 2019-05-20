@@ -1,0 +1,112 @@
+<!--div>
+
+  <li *ngFor="let i of ads | keyvalue">
+    {{ i.value.price }}
+    
+    </li>
+
+    
+</div>
+<p>
+  ad-dashboard works!
+ 
+  
+ 
+</p-->
+<div class="main-container">
+    <div class="alert alert-app-level">
+        ...
+    </div>
+    <header class="header header-6">
+        <img src="https://i.ibb.co/sCqPmC4/i-Store-ADs.png" alt="i-Store-ADs" border="5">
+        <!--{{temp}} {{userId}}-->
+        
+                
+    </header>
+    <nav class="subnav">
+        <clr-dropdown>
+            <button type="button" class="btn btn-outline-primary" clrDropdownTrigger>
+                My Account {{userId}}
+                <clr-icon shape="caret down"></clr-icon>
+            </button>
+            <clr-dropdown-menu clrPosition="bottom-right" *clrIfOpen>
+                <label class="dropdown-header">Account Details</label>
+                <button type="button" *ngIf=accDetails[0] (click)="login()" clrDropdownItem>Login</button>
+                <button type="button" *ngIf=accDetails[1] (click)="showMyOrders()" clrDropdownItem>My Orders</button>
+                <button type="button" *ngIf=accDetails[2] (click)="showMyAds()" clrDropdownItem>My Ads</button>
+                <div class="dropdown-divider"></div>
+                <button type="button" *ngIf=accDetails[3] (click)="getOut()" clrDropdownItem>Logout</button>
+            </clr-dropdown-menu>
+        </clr-dropdown>
+    </nav>
+    <div class="content-container">
+        <div class="content-area">
+            <div class="clr-row">
+                <div class="clr-col-lg-6 clr-col-12" *ngFor="let ad of ads | keyvalue">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>{{ad.value.name}}</h2>
+                        </div>
+                        <div class="card-block">
+                            <div class="card-media-block wrap">
+                                <img src="https://i.ibb.co/41PcQXj/iStoreA.jpg" >
+                                <div class="card-media-description">
+                                    <span class="card-media-title">
+                                        <b>Price : Rs.{{ad.value.price}}</b>
+                                    </span>
+                                    <span class="card-media-text">
+                                        Seller : {{ad.value.sellerId}}
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="card-text">
+                                Category : {{ad.value.category}}
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="btn-group btn-primary" ng-app="istore" >
+                                    <button class="btn" (click)="buyNow(ad.value.id,ad.value.sellerId,ad.value.price)">BUY NOW</button>
+                                    <button class="btn btn-success">ADD TO CART</button>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <nav class="sidenav">
+           <div>
+              <button class="btn btn-success" (click)="postAd()">POST AN AD</button>
+           </div>
+            <section class="nav-group collapsible">
+                <input id="tabexample1" type="checkbox">
+                <label for="tabexample1" aria-setsize="20">Categories</label>
+                <ul class="nav-list">
+                    <li><a class="nav-link">Bikes</a></li>
+                    <li><a class="nav-link">Mobiles</a></li>
+                </ul>
+           
+
+                <clr-checkbox-container>
+                <label>Select Filters</label>
+                <clr-checkbox-wrapper>
+                    <input type="checkbox" clrCheckbox value="option1" name="options" />
+                    <label>Newest Arrival (0-3 months old )</label>
+                  </clr-checkbox-wrapper>
+                  <clr-checkbox-wrapper>
+                    <input type="checkbox" clrCheckbox value="option2" name="options" />
+                    <label>Old Items (more than 3 months older )</label>
+                  </clr-checkbox-wrapper>
+                <clr-control-helper>Filtering the items as per your wish</clr-control-helper>
+                <clr-control-error>Please select a filter option</clr-control-error>
+              </clr-checkbox-container>
+            </section>
+        </nav>
+    </div>
+</div>
+
+
+
+<button (click)="showAds()">SHOW ADS</button>
+
+

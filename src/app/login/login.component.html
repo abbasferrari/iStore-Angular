@@ -1,0 +1,24 @@
+<div class="login-wrapper">
+        <form class="login" #loginForm = "ngForm" (ngSubmit)="onSubmit()">
+            <section class="title">
+                <h3 class="welcome">Welcome to</h3>
+                <b>IStore</b>Selling/Buying Site
+                <h5 class="hint">Sign in Or Create an account</h5>
+            </section>
+            <div class="login-group">
+                <clr-input-container>
+                    <input type="text" name="username" clrInput placeholder="Username" [(ngModel)]="u.email"/>
+                              </clr-input-container>
+                <clr-password-container>
+                    <input type="password" name="password" clrPassword placeholder="Password" [(ngModel)]="u.password"/>
+                </clr-password-container>
+                <div class="error" *ngIf = loginFlag>
+                    Invalid user name or password
+                </div>
+                <button type="submit" class="btn btn-success-outline btn-block">LOGIN</button>
+                <button type="button" (click)="onRegister()" class="btn btn-success-outline btn-block">REGISTER AN ACCOUNT NOW</button>
+                
+            </div>
+        </form>
+      </div>
+    
