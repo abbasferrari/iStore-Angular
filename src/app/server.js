@@ -6,7 +6,7 @@ const app = express();
 
 
 var corsOptions = {
-    origin: 'https://lit-eyrie-15561.herokuapp.com/',
+    origin: 'https://istore-jpa-spring-boot-backend.herokuapp.com/',
     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
   }
 
