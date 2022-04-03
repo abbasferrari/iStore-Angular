@@ -8,7 +8,7 @@ import { Ad } from './Ad';
   providedIn: 'root'
 })
 export class AdServiceService {
-  private showad_url = "http:localhost:8080/showAds"; //"https://istore-jpa-spring-boot-backend.herokuapp.com/showAds";
+  private showad_url = "https://lit-eyrie-15561.herokuapp.com/showAds"; //"https://istore-jpa-spring-boot-backend.herokuapp.com/showAds";
   private postad_url = "http:localhost:8080/postAd"; //"https://istore-jpa-spring-boot-backend.herokuapp.com/postAd"
   private soldad_url = "http:localhost:8080/updateAdStatus"; //"https://istore-jpa-spring-boot-backend.herokuapp.com/updateAdStatus";
   private checkout_url = "http:localhost:8080/checkOutAd"; //"https://istore-jpa-spring-boot-backend.herokuapp.com/checkOutAd";
