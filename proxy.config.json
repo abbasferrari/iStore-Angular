@@ -1,6 +1,6 @@
 {
     "/api/*": {
-      "target": "https://istore-jpa-spring-boot-backend.herokuapp.com/",
+      "target": "https://lit-eyrie-15561.herokuapp.com",
       "secure": false,
       "changeOrigin": true,
       "logLevel": "debug",
