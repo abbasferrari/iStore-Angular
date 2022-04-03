@@ -8,11 +8,11 @@ import { Ad } from './Ad';
   providedIn: 'root'
 })
 export class AdServiceService {
-  private showad_url = "https://istore-jpa-spring-boot-backend.herokuapp.com/showAds";//"http://localhost:8080/showAds";
-  private postad_url = "https://istore-jpa-spring-boot-backend.herokuapp.com/postAd";//"http://localhost:8080/postAd";
-  private soldad_url = "https://istore-jpa-spring-boot-backend.herokuapp.com/updateAdStatus";//"http://localhost:8080/updateAdStatus";
-  private checkout_url = "https://istore-jpa-spring-boot-backend.herokuapp.com/checkOutAd";//"http://localhost:8080/checkOutAd";
-  private getTransId_url = "https://istore-jpa-spring-boot-backend.herokuapp.com/getTransId";//"http://localhost:8080/getTransId";
+  private showad_url = http:localhost:8080/showAds; //"https://istore-jpa-spring-boot-backend.herokuapp.com/showAds";
+  private postad_url = http:localhost:8080/postAd; //"https://istore-jpa-spring-boot-backend.herokuapp.com/postAd"
+  private soldad_url = http:localhost:8080/updateAdStatus; //"https://istore-jpa-spring-boot-backend.herokuapp.com/updateAdStatus";
+  private checkout_url = http:localhost:8080/checkOutAd; //"https://istore-jpa-spring-boot-backend.herokuapp.com/checkOutAd";
+  private getTransId_url = http:localhost:8080/getTransId; //"https://istore-jpa-spring-boot-backend.herokuapp.com/getTransId";
   private c_url = "http://localhost:8080/c";
 
   constructor(private http:HttpClient) { }
